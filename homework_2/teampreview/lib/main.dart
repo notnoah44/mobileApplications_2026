@@ -173,7 +173,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar1.png",
       quote: "Development is a continuous learning process.",
       homeCountry: "Finland",
-      role: "Lead Developer",
+      role: "Project Manger",
       hobbies: ["Coding", "Hiking", "Gaming"],
     ),
     TeamMember(
@@ -181,7 +181,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar2.png",
       quote: "The best way to predict the future is to create it.",
       homeCountry: "Germany",
-      role: "UI/UX Designer",
+      role: "Developer",
       hobbies: ["Photography", "Design", "Skiing"],
     ),
     TeamMember(
@@ -189,7 +189,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar3.png",
       quote: "Quality is my top priority.",
       homeCountry: "Finland",
-      role: "QA Engineer",
+      role: "UI/UX Designer",
       hobbies: ["Cooking", "Travel", "Chess"],
     ),
     TeamMember(
@@ -197,7 +197,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar4.png",
       quote: "Creativity is intelligence having fun.",
       homeCountry: "Finland",
-      role: "Frontend Developer",
+      role: "Developer",
       hobbies: ["Painting", "Music", "Reading"],
     ),
     TeamMember(
@@ -205,7 +205,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar5.png",
       quote: "Success is no accident, it's hard work.",
       homeCountry: "Finland",
-      role: "Backend Developer",
+      role: "Developer",
       hobbies: ["Gardening", "Baking", "Yoga"],
     ),
     TeamMember(
@@ -213,7 +213,7 @@ class _TeamScreenState extends State<TeamScreen> {
       imagePath: "assets/images/avatar6.png",
       quote: "Simplicity is the ultimate sophistication.",
       homeCountry: "Finland",
-      role: "Project Manager",
+      role: "UI/UX Designe",
       hobbies: ["Sailing", "History", "Coffee"],
     ),
   ];
