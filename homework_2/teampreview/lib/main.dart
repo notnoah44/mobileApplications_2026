@@ -72,7 +72,6 @@ class MemberCard extends StatelessWidget {
   }
 }
 
-// 1. The Blueprint (The Widget)
 class TeamScreen extends StatefulWidget {
   const TeamScreen({super.key});
 
@@ -80,13 +79,10 @@ class TeamScreen extends StatefulWidget {
   State<TeamScreen> createState() => _TeamScreenState();
 }
 
-// 2. The Brain (The State)
 class _TeamScreenState extends State<TeamScreen> {
-  // This is where we define variables that will CHANGE
   final PageController _pageController = PageController();
-  int _currentIndex = 0; // Remembers which member we are looking at
+  int _currentIndex = 0;
 
-  // This is our data list (using your TeamMember model)
   final List<TeamMember> members = [
     TeamMember(
       firstName: "Noah",
@@ -132,13 +128,11 @@ class _TeamScreenState extends State<TeamScreen> {
       ),
       body: Column(
         children: [
-          // The PageView.builder acts as our slider
           Expanded(
             child: PageView.builder(
               controller: _pageController,
               itemCount: members.length,
               onPageChanged: (index) {
-                // This updates the dots when you swipe
                 setState(() {
                   _currentIndex = index;
                 });
@@ -149,9 +143,8 @@ class _TeamScreenState extends State<TeamScreen> {
             ),
           ),
 
-          // Dots Indicator
           _buildDots(),
-          const SizedBox(height: 40), // Space at the bottom
+          const SizedBox(height: 40),
         ],
       ),
     );
@@ -167,7 +160,6 @@ class _TeamScreenState extends State<TeamScreen> {
           height: 12,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            // If the dot index matches current page, make it dark
             color: _currentIndex == index ? Colors.black87 : Colors.white,
             border: Border.all(color: Colors.black26),
           ),
