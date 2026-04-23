@@ -4,14 +4,13 @@ import '../models/dish.dart';
 import '../screens/dish_details_screen.dart';
 
 class MenuScreen extends StatefulWidget {
-  const MenuScreen({Key? key}) : super(key: key);
+  const MenuScreen({super.key});
 
   @override
   State<MenuScreen> createState() => _MenuScreenState();
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  // List of all categories
   final List<String> categories = [
     'Starters',
     'Main Courses',
@@ -19,10 +18,8 @@ class _MenuScreenState extends State<MenuScreen> {
     'Drinks',
   ];
 
-  // Currently selected category
   String selectedCategory = 'Starters';
 
-  // Get dishes for selected category
   List<Dish> getDishesByCategory(String category) {
     return allDishes.where((dish) => dish.category == category).toList();
   }
@@ -48,7 +45,6 @@ class _MenuScreenState extends State<MenuScreen> {
       ),
       body: Column(
         children: [
-          // Category buttons (horizontal list)
           Container(
             color: Colors.white,
             padding: const EdgeInsets.all(10),
@@ -90,7 +86,6 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
           ),
-          // Dishes list
           Expanded(
             child: ListView.builder(
               itemCount: displayedDishes.length,
@@ -99,7 +94,6 @@ class _MenuScreenState extends State<MenuScreen> {
 
                 return GestureDetector(
                   onTap: () {
-                    // Navigate to Dish Details Screen and pass the dish
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => DishDetailsScreen(dish: dish),
@@ -116,7 +110,6 @@ class _MenuScreenState extends State<MenuScreen> {
                       padding: const EdgeInsets.all(12),
                       child: Row(
                         children: [
-                          // Emoji icon
                           Container(
                             width: 80,
                             height: 80,
@@ -132,7 +125,6 @@ class _MenuScreenState extends State<MenuScreen> {
                             ),
                           ),
                           const SizedBox(width: 12),
-                          // Dish info
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

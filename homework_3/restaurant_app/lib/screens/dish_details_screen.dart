@@ -5,7 +5,7 @@ class DishDetailsScreen extends StatelessWidget {
   // Receive the dish as a parameter
   final Dish dish;
 
-  const DishDetailsScreen({Key? key, required this.dish}) : super(key: key);
+  const DishDetailsScreen({super.key, required this.dish});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,6 @@ class DishDetailsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Large emoji icon at the top
             Container(
               width: double.infinity,
               color: Colors.white,
@@ -46,13 +45,11 @@ class DishDetailsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Content
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Dish name
                   Text(
                     dish.name,
                     style: const TextStyle(
@@ -61,7 +58,6 @@ class DishDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  // Category and Price in a row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -94,13 +90,11 @@ class DishDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 30),
-                  // Description title
                   const Text(
                     'Description',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
-                  // Description text
                   Text(
                     dish.description,
                     style: TextStyle(
@@ -110,13 +104,11 @@ class DishDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  // Order button
                   SizedBox(
                     width: double.infinity,
                     height: 60,
                     child: ElevatedButton(
                       onPressed: () {
-                        // Show a simple snack bar
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(

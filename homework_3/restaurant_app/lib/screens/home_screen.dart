@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../screens/menu_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Header
             Container(
               color: Colors.deepOrange,
               padding: const EdgeInsets.all(20),
@@ -37,7 +36,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            // Body
             Expanded(
               child: Center(
                 child: Column(
@@ -58,13 +56,11 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 16, color: Colors.grey),
                     ),
                     const SizedBox(height: 50),
-                    // Button
                     SizedBox(
                       width: 250,
                       height: 60,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Navigate to Menu Screen
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) => const MenuScreen(),
